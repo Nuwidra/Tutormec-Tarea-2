@@ -1,4 +1,3 @@
-BITS 16
 
 start:
     mov ax, 07C0h
@@ -15,7 +14,15 @@ start:
 
     jmp $
 
-    helloText db "Hola Mundo! :D", 0
+    helloText db "Bienvenido a Tutormec :D", 10, 0X0D\
+    ,"- - - - - - - - - - - - - - - - - - :", 10, 0X0D\
+    ,"   ..    ..    ..   ..   ..    ..   :", 10, 0X0D\
+    ,"   ::    ::    ::   ::   ::    ::   :", 10, 0X0D\
+    ,"   ::    ::    ::   ::   ::    ::   :", 10, 0X0D\
+    ,"   ::    ::    ::   ::   ::    ::   :", 10, 0X0D\
+    ,"   ..    ..    ..   ..   ..    ..   :", 10, 0X0D\
+    ,"- - - - - - - - - - - - - - - - - - :", 10, 0X0D\
+    ,"10                               100:", 0
 
 
 printStr:
@@ -31,8 +38,6 @@ printStr:
     
 .done:
     ret
-    
-
 
 TIMES 510 - ($ - $$) db 0
 dw 0xAA55
