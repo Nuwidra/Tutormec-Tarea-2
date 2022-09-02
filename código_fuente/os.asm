@@ -18,6 +18,14 @@
 ;         Tutormec
 ;
 ; ======================================================================================
+
+; ======================================================================================
+; Ejecución en Terminal para el funcionamiento de la tarea:
+;                       [1] "make"
+;                       [2] "qemu-system-x86_64 bin/os.bin"
+;                       [3] "sudo dd if=bin/os.bin of=/dev/sdb"
+;                       [4] "sudo qemu-system-x86_64 -hda /dev/sdb"
+; ======================================================================================
 %include "tutormecInfo.inc"
 
 TUTORMEC_LOAD_SEG  equ TUTORMEC_ABS_ADDR>>4

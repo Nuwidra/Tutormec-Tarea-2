@@ -85,7 +85,7 @@ Almacena una estructura de datos de dos bytes. En el primer byte está el límit
     ~~~
 3. Ya habiendo probado el binario de una manera éxitosa se procederá a hacer el quemado del binario a la USB que dispongamos, con el siguiente comando:
     ~~~
-    sudo dd if=os.bin of=/dev/sdb
+    sudo dd if=bin/os.bin of=/dev/sdb
     ~~~
     Con dicho comando se debe de tener el **CUIDADO** de digitar la dirección de la llave maya correctamente, ya que en este paso se puede realizar un desastre en su computadora.
 4. Adicionalmente se procede a poder probar el archivo binario quemado en la llave maya con ayuda del siguiente comando, más que todo como medida preventiva y cautelosa.
@@ -102,21 +102,24 @@ Almacena una estructura de datos de dos bytes. En el primer byte está el límit
 ### Actividades realizadas por estudiante
 |Fecha|Inicio|Fin|Avance Realizado|
 |---|------|---|---| 
-|24/08/2002|3:00 pm|5:00 pm|Investigar sobre como hacer un booteo en la llave maya|
-|25/08/2002|7:00 pm|10:00 pm|Investigar sobre QEMU y hacer el quemado en la llave maya|
-|26/08/2002|5:00 pm|7:00 pm|Booteo exitoso de la llave malla y creación de la documentación|
-|26/08/2002|3:00 pm|5:00 pm|Probar el límite de TIMES por medio de tableros y repetir pasos de booteo formateando la llave maya con partición|
-|26/08/2002|6:00 pm|1:00 am|Iniciar aprendizaje de ensamblador con manuales y tutoriales|
-|27/08/2002|9:00 am|7:00 pm|Leer manuales de ensamblador e ir implementando ideas en el código aprendido|
-|28/08/2002|1:00 pm|11:00 pm|Aprender ensamblador, leer manuales, seguir implementando ideas en ensamblador y avanzar la documentación|
-|29/08/2002|1:00 pm|8:00 pm|Realizar investigación de como poder establecer las animaciones para las letras que deben de estar entre los bloques|
-|31/08/2002|6:00 pm|10:00 pm|Realizar el commit respectivo del avance investigado y terminar la documentación|
+|24/08/2022|3:00 pm|5:00 pm|Investigar sobre como hacer un booteo en la llave maya|
+|25/08/2022|7:00 pm|10:00 pm|Investigar sobre QEMU y hacer el quemado en la llave maya|
+|26/08/2022|5:00 pm|7:00 pm|Booteo exitoso de la llave malla y creación de la documentación|
+|26/08/2022|3:00 pm|5:00 pm|Probar el límite de TIMES por medio de tableros y repetir pasos de booteo formateando la llave maya con partición|
+|26/08/2022|6:00 pm|1:00 am|Iniciar aprendizaje de ensamblador con manuales y tutoriales|
+|27/08/2022|9:00 am|7:00 pm|Leer manuales de ensamblador e ir implementando ideas en el código aprendido|
+|28/08/2022|1:00 pm|11:00 pm|Aprender ensamblador, leer manuales, seguir implementando ideas en ensamblador y avanzar la documentación|
+|29/08/2022|1:00 pm|8:00 pm|Realizar investigación de como poder establecer las animaciones para las letras que deben de estar entre los bloques|
+|31/08/2022|6:00 pm|1:00 am|Realizar el commit respectivo del avance investigado y terminar la documentación|
+|1/09/2022|5:00 pm|8:00 am|Realizar el aspecto técnico faltante (decir que dedo presioanar la tecla) y actualizar la documentación|
 
 ***
+
+
 ### Autoevaluación
 
 #### Estado final
-
+Con lo que respecta al estado final de la tarea, se ve contemplado los requerimientos funcionales y los requerimientos técnicos, por parte de la parte del booteo, pero en cuanto al tutormec también se vieron cubiertos todos los requisitos técnicos de la tarea, los cuales contempla la introducción y la especificación de la tarea
 
 #### Problemas y limitaciones
 Con lo que respecta al booteo los problemas que llegaron a surgir fueron:
@@ -134,6 +137,30 @@ Ahora bien con lo que respecta a la otra parte de la tarea la cual se refiere al
 #### Reporte de commits
 
 ~~~
+commit 9549c0945683cdf41882f0597d9b17a654923518 (HEAD -> master, origin/master, origin/HEAD)
+Author: Nuwidra <https://github.com/Nuwidra/IC-2101-POO-2020-ii->
+Date:   Thu Sep 1 00:47:26 2022 -0600
+
+    documentation and development of last details of the program
+
+commit ae64aeb7382d006c1b5c6db9e0cb456858aaf2f1
+Author: Nuwidra <https://github.com/Nuwidra/IC-2101-POO-2020-ii->
+Date:   Thu Sep 1 00:42:31 2022 -0600
+
+    functional code
+
+commit 717baa017652fa9a0f7ceb896b2446bb39726b1b
+Author: Nuwidra <https://github.com/Nuwidra/IC-2101-POO-2020-ii->
+Date:   Sat Aug 27 15:13:22 2022 -0600
+
+    Board Creation
+
+commit 37b53b31c8fe53dc069265658386b056b427da35
+Author: Nuwidra <https://github.com/Nuwidra/IC-2101-POO-2020-ii->
+Date:   Fri Aug 26 18:20:55 2022 -0600
+
+    Boot advance successfully
+(END)
 
 ~~~
 
@@ -162,6 +189,7 @@ Ahora bien con lo que respecta a la otra parte de la tarea la cual se refiere al
     ~~~
 5. Tener un orden establecido para las referencias para el desarrollo del programa de Tutormec fue de mucha utilidad, ya que este mismo me sirvió para tener un mejor orden para el desarrollo de la tarea en ensamblador, ya que este lenguaje de programación esta sujeta a mucha observación y lógica para el programa.
 6. En cuanto respecta al booteo conlleva más pasos de los que pensé ya que cuando aplicaba el comando descrito en la lección 4, no me funcionaba el comando ya que este solamente hace el quemado de la llave maya, para poder hacer que la llave maya logrará bootear de la mejor manera fue necesario hacer una partición en el apartado de "Discos" de la compu y dirigirse al apartado de la llave maya y realizar una partición y agregar el archivo de extensión .bin a la partición de la llave maya previamente realizada.
+7. Un tema adicional que me logró hacer los respectivos avances de la tarea de tutormec fue la indexación el cual consiste en variantes del direccionamiento indexado en que se obtiene la dirección del operando sumando el contenido de varios registros con el desplazamiento, esto puede servir para especificar el comienzo de un vector mediante un desplazamiento respecto a un registro y el elemento del vector.
 
 
 ***

@@ -18,6 +18,15 @@
 ;         Tutormec
 ;
 ; ======================================================================================
+
+; ======================================================================================
+; Ejecución en Terminal para el funcionamiento de la tarea:
+;                       [1] "make"
+;                       [2] "qemu-system-x86_64 bin/os.bin"
+;                       [3] "sudo dd if=bin/os.bin of=/dev/sdb"
+;                       [4] "sudo qemu-system-x86_64 -hda /dev/sdb"
+; ======================================================================================
+
 %include "tutormecInfo.inc"
 %define current_char_index_array 0x500 ; Lista de los indices de char_object_array que se muestran en pantalla, por defecto únicamente tiene uno.
 %define boxes_x_cordenates_array 0x500 ; Almacena una estructura de datos de dos bytes. 
@@ -341,6 +350,7 @@ initialize_boxes_x_cordenates_array:
     pop dx
     ret;
 
+; Se inicializa la siguiente letra en la pantalla
 initialize_next_char_on_screen:
     push cx
     mov cl, chars_on_screen
@@ -604,7 +614,9 @@ draw_box_area:
 welcome_string:  db 'Bienvenido a Tutormec',13,10,'Presionar [esc] para salir.',13,10,'Presionar [enter] para empezar.', 0
 text_string db 'Nuwidra OS',13,10,'1) Tutormec',13,10,'2) Reboot',13,10,'3) Cerrar',13,10,'4) Acerca',0
 about_string db 'Tutormec para el curso de Principios de Sistemas Operativos por Nuwidra',0
-score_label db "Puntaje: ", 0
+score_label db "Puntaje: ", 10, 0X0D\
+              ,"Presionar con anular y dedo medio izquierdo", 0
+
 string_buffer times 5 db 0
 score_count dw 0
 
